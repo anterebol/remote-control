@@ -20,9 +20,13 @@ wss.on('connection', function connection(ws) {
     console.log('received: %s', currentCommand);
     response = rule(currentCommand);
     if (!currentCommand.includes('prnt_scrn')) {
-      ws.send(`${response}`);
-      if (response.includes('mouse_position')) {
-        console.log(response);
+      if (typeof response === 'string') {
+        if (response.includes('mouse_position')) {
+          console.log(response);
+          ws.send(`${response}`);
+        } else {
+          ws.send(`${response}`);
+        }
       }
     }
   });
