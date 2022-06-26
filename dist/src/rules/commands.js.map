@@ -1,1 +1,0 @@
-{"version":3,"file":"commands.js","sourceRoot":"","sources":["../../../src/rules/commands.ts"],"names":[],"mappings":";;;AAAa,QAAA,QAAQ,GAAG;IACtB,EAAE,EAAE,UAAU;IACd,IAAI,EAAE,YAAY;IAClB,IAAI,EAAE,YAAY;IAClB,KAAK,EAAE,aAAa;IACpB,QAAQ,EAAE,gBAAgB;IAC1B,MAAM,EAAE,aAAa;IACrB,SAAS,EAAE,gBAAgB;IAC3B,MAAM,EAAC,aAAa;IACpB,IAAI,EAAE,WAAW;CAClB,CAAA"}
