@@ -52,18 +52,21 @@ function rule(command: string) {
         if (status) {
           console.log('Successfully');
           return status;
-        }
-      } return false;
+        } 
+      } 
+      console.log(false);
+      return false;
     case commandData[0] === rectangle:
       if (+commandData[1] && +commandData[2]) {
         status = drawRectangular(Number(commandData[1]), Number(commandData[2]));
         if (status) {
+          console.log(status)
           console.log('Successfully');
           return status;
         }
-      } else {
-        return false
-      }
+      } 
+      console.log(false)
+      return false
     case commandData[0] === circle:
       if (+commandData[1]) {
         status = drawCircle(Number(commandData[1]));
@@ -71,7 +74,9 @@ function rule(command: string) {
           console.log('Successfully');
           return status;
         }
-      } return false;
+      }
+      console.log(false); 
+      return false;
     case commandData[0] === scrn:
       screen();
       break;

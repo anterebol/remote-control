@@ -31,7 +31,11 @@ export function drawRectangular(valueX, valueY = null) {
   lineDown(y);
   lineLeft(x);
   robot.mouseToggle('up');
-  if (status) {
+  if (status && valueX) {
     return status;
-  } return commands.rectangle;
+  } else if (valueX && valueY) {
+    return commands.rectangle;
+  } else {
+    return null
+  }
 }
