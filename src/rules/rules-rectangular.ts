@@ -19,7 +19,11 @@ function searchDirection(valueX, valueY) {
   return direct;
 }
 
-export function drawRectangular(valueX, valueY = valueX) {
+export function drawRectangular(valueX, valueY = null) {
+  const status = !valueY ? commands.square : null;
+  if (!valueY) {
+    valueY = valueX;
+  }
   let { x, y } = searchDirection(valueX, valueY);
   robot.mouseToggle('down');
   lineUp(y);
@@ -27,7 +31,7 @@ export function drawRectangular(valueX, valueY = valueX) {
   lineDown(y);
   lineLeft(x);
   robot.mouseToggle('up');
-  if (!valueY) {
-    return commands.square;
+  if (status) {
+    return status;
   } return commands.rectangle;
 }
